@@ -203,15 +203,7 @@ body {
   max-width: none !important;
 }
 
-/* Reset all width constraints in popovers and prevent content cutoff */
-.popover,
-.hover-popover,
-.popover.hover-popover {
-  max-width: none !important;
-  width: auto !important;
-  overflow: visible !important;
-}
-
+/* Reset width constraints in popovers */
 .popover .markdown-preview-sizer,
 .hover-popover .markdown-preview-sizer,
 .popover.hover-popover .markdown-preview-sizer,
@@ -219,8 +211,30 @@ body {
 .hover-popover .markdown-preview-view,
 .popover.hover-popover .markdown-preview-view {
   max-width: none !important;
-  width: auto !important;
-  overflow: visible !important;
+}
+
+/* Ensure content wraps properly in popovers */
+.popover .markdown-rendered,
+.hover-popover .markdown-rendered,
+.popover.hover-popover .markdown-rendered {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+.popover .markdown-rendered pre,
+.hover-popover .markdown-rendered pre,
+.popover.hover-popover .markdown-rendered pre {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  white-space: pre-wrap !important;
+}
+
+.popover .markdown-rendered pre code,
+.hover-popover .markdown-rendered pre code,
+.popover.hover-popover .markdown-rendered pre code {
+  white-space: pre-wrap !important;
+  word-break: break-all !important;
 }
 
 /* ============================================
