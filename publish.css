@@ -200,6 +200,7 @@ body {
   box-shadow: none !important;
   margin-bottom: 1.5em !important;
   margin-left: 0 !important;
+  max-width: none !important;
 }
 
 /* ============================================
