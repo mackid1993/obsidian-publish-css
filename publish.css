@@ -203,7 +203,15 @@ body {
   max-width: none !important;
 }
 
-/* Reset all width constraints in popovers */
+/* Reset all width constraints in popovers and prevent content cutoff */
+.popover,
+.hover-popover,
+.popover.hover-popover {
+  max-width: none !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
 .popover .markdown-preview-sizer,
 .hover-popover .markdown-preview-sizer,
 .popover.hover-popover .markdown-preview-sizer,
@@ -212,6 +220,7 @@ body {
 .popover.hover-popover .markdown-preview-view {
   max-width: none !important;
   width: auto !important;
+  overflow: visible !important;
 }
 
 /* ============================================
