@@ -7,9 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 /* Hide Obsidian Publish footer */
-.site-footer {
+/*.site-footer {
   display: none;
-}
+}*/
 
 /* ============================================
    COLOR PALETTE - Subtle Grays
@@ -399,4 +399,5 @@ a:hover,
   border: none;
   border-top: 1px solid var(--background-modifier-border);
   margin: 3em 0;
+
 }
