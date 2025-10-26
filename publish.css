@@ -203,28 +203,15 @@ body {
   max-width: none !important;
 }
 
-/* Reset markdown-preview-sizer width constraint in popovers */
+/* Reset all width constraints in popovers */
 .popover .markdown-preview-sizer,
 .hover-popover .markdown-preview-sizer,
-.popover.hover-popover .markdown-preview-sizer {
+.popover.hover-popover .markdown-preview-sizer,
+.popover .markdown-preview-view,
+.hover-popover .markdown-preview-view,
+.popover.hover-popover .markdown-preview-view {
   max-width: none !important;
-}
-
-/* Ensure code blocks in popovers don't cause width issues */
-.popover .markdown-rendered pre,
-.hover-popover .markdown-rendered pre,
-.popover.hover-popover .markdown-rendered pre {
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  word-wrap: break-word !important;
-  white-space: pre-wrap !important;
-}
-
-.popover .markdown-rendered code,
-.hover-popover .markdown-rendered code,
-.popover.hover-popover .markdown-rendered code {
-  word-wrap: break-word !important;
-  white-space: pre-wrap !important;
+  width: auto !important;
 }
 
 /* ============================================
