@@ -203,6 +203,26 @@ body {
   max-width: none !important;
 }
 
+/* Reset all width constraints in popovers and prevent content cutoff */
+.popover,
+.hover-popover,
+.popover.hover-popover {
+  max-width: none !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
+.popover .markdown-preview-sizer,
+.hover-popover .markdown-preview-sizer,
+.popover.hover-popover .markdown-preview-sizer,
+.popover .markdown-preview-view,
+.hover-popover .markdown-preview-view,
+.popover.hover-popover .markdown-preview-view {
+  max-width: none !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
 /* ============================================
    HEADINGS - Small, Lightweight, Uppercase
    ============================================ */
