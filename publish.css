@@ -100,9 +100,36 @@ body {
   font-size: 0.9em;
 }
 
-.site-header-text,
-.site-header-text a {
-  max-width: 800px !important;;
+.site-header {
+  max-width: 500px !important;
+}
+
+/* Small desktop/tablet */
+@media (min-width: 768px) {
+  .site-header {
+    max-width: 600px !important;
+  }
+}
+
+/* Medium desktop - Obsidian's breakpoint */
+@media (min-width: 1000px) {
+  .site-header {
+    max-width: 650px !important;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .site-header {
+    max-width: 750px !important;
+  }
+}
+
+/* Extra large desktop - full 800px */
+@media (min-width: 1600px) {
+  .site-header {
+    max-width: 800px !important;
+  }
 }
 
 /* Responsive sizing for site name */
