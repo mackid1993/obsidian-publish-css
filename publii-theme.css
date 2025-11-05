@@ -1,0 +1,573 @@
+/* ============================================
+   PUBLII SIMPLE THEME - MINIMAL GRAY DARK
+   ============================================ */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* ============================================
+   COLOR PALETTE - Subtle Grays
+   ============================================ */
+
+:root {
+  --background-primary: #2b2b2b;
+  --background-secondary: #323232;
+  --background-modifier-border: #404040;
+
+  --text-normal: #b8b8b8;
+  --text-muted: #8a8a8a;
+  --text-faint: #5a5a5a;
+
+  --interactive-accent: #7a7a7a;
+  --interactive-hover: #a8a8a8;
+
+  --code-background: #252525;
+}
+
+/* ============================================
+   BASE TYPOGRAPHY
+   ============================================ */
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-normal);
+  background-color: var(--background-primary);
+  line-height: 1.6;
+}
+
+/* Override all Roboto fonts globally */
+* {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Content container */
+.wrapper {
+  max-width: 800px;
+}
+
+/* ============================================
+   SITE HEADER & BRANDING
+   ============================================ */
+
+.logo {
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.logo:hover {
+  color: var(--text-normal);
+}
+
+/* Responsive logo sizing */
+@media (min-width: 37.5em) {
+  .logo {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .logo {
+    font-size: 1.1em;
+  }
+}
+
+/* Navigation menu links */
+.navbar a,
+.navbar__menu a,
+.menu a,
+nav a,
+header nav a {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* ============================================
+   PAGE/POST TITLE
+   ============================================ */
+
+.hero h1 {
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  font-weight: 500 !important;
+  font-size: 2.5em !important;
+  color: var(--text-muted) !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Hero section styling */
+.hero,
+.hero__content,
+header.hero__content {
+  padding: 0 !important;
+  margin: 0 0 1.5em 0 !important;
+}
+
+/* Hide hero separator line */
+.hero::after,
+.hero.hero--noimage::after,
+div.hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* ============================================
+   CONTENT BOX
+   ============================================ */
+
+article.content {
+  background-color: var(--background-secondary) !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  border-radius: 12px !important;
+  padding: 0.8em !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4),
+              0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  margin: 0 auto 3em auto !important;
+  max-width: 500px !important;
+}
+
+/* Responsive content box width */
+@media (min-width: 37.5em) {
+  article.content {
+    max-width: 600px !important;
+  }
+}
+
+@media (min-width: 56.25em) {
+  article.content {
+    max-width: 700px !important;
+  }
+}
+
+@media (min-width: 70rem) {
+  article.content {
+    max-width: 800px !important;
+  }
+}
+
+/* ============================================
+   HEADINGS - Small, Lightweight, Uppercase
+   ============================================ */
+
+.post__entry h1,
+.post__entry h2,
+.post__entry h3,
+.post__entry h4,
+.post__entry h5,
+.post__entry h6,
+article h1:not(.hero h1),
+article h2,
+article h3,
+article h4,
+article h5,
+article h6,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: var(--text-muted) !important;
+  font-weight: 300 !important;
+  margin-top: 2em !important;
+  margin-bottom: 0.7em !important;
+}
+
+.post__entry h1,
+article h1:not(.hero h1),
+main h1 {
+  font-size: 1.1em !important;
+  font-weight: 300 !important;
+}
+
+.post__entry h2,
+article h2,
+main h2 {
+  font-size: 1em !important;
+  font-weight: 300 !important;
+}
+
+.post__entry h3,
+article h3,
+main h3 {
+  font-size: 0.95em !important;
+  font-weight: 300 !important;
+}
+
+.post__entry h4,
+article h4,
+main h4 {
+  font-size: 0.9em !important;
+  font-weight: 300 !important;
+}
+
+.post__entry h5,
+.post__entry h6,
+article h5,
+article h6,
+main h5,
+main h6 {
+  font-size: 0.85em !important;
+  font-weight: 300 !important;
+  color: var(--text-faint) !important;
+}
+
+/* ============================================
+   CONTENT
+   ============================================ */
+
+.post__entry p,
+article p,
+main p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+/* ============================================
+   IMAGES
+   ============================================ */
+
+.post__entry img:first-of-type,
+article img:first-of-type,
+main img:first-of-type {
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+.post__entry img,
+.post__image img,
+article img,
+main img {
+  border-radius: 4px;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+/* Navigation links */
+a,
+a:visited,
+a:active {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-normal);
+}
+
+/* Content links */
+.post__entry a,
+.post__entry a:visited,
+.post__entry a:active,
+article a,
+article a:visited,
+article a:active,
+main a,
+main a:visited,
+main a:active {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-faint);
+  transition: all 0.3s ease;
+}
+
+.post__entry a:hover,
+article a:hover,
+main a:hover {
+  color: var(--text-normal);
+  border-bottom-color: var(--text-muted);
+}
+
+/* ============================================
+   CODE
+   ============================================ */
+
+.post__entry code,
+article code,
+main code {
+  background-color: var(--code-background);
+  color: var(--text-muted);
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+.post__entry pre,
+article pre,
+main pre {
+  background-color: var(--code-background);
+  padding: 1.5em;
+  border-radius: 5px;
+  border: 1px solid var(--background-modifier-border);
+  overflow-x: auto;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+.post__entry pre code,
+article pre code,
+main pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ============================================
+   BLOCKQUOTES
+   ============================================ */
+
+.post__entry blockquote,
+article blockquote,
+main blockquote {
+  border-left: 2px solid var(--text-faint);
+  padding-left: 2em;
+  margin: 1em 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+.post__entry ul,
+.post__entry ol,
+article ul,
+article ol,
+main ul,
+main ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.post__entry li,
+article li,
+main li {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+.post__entry table,
+article table,
+main table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.post__entry th,
+article th,
+main th {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  padding: 1em;
+  text-align: left;
+  border-bottom: 1px solid var(--background-modifier-border);
+  color: var(--text-muted);
+}
+
+.post__entry td,
+article td,
+main td {
+  padding: 1em;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* ============================================
+   HORIZONTAL RULES
+   ============================================ */
+
+/* Remove Publii's default bullet-point HR styling */
+hr::before,
+.separator::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Style all content HRs with line */
+.post__entry hr,
+.content__entry hr,
+article.content hr,
+main hr,
+.separator {
+  display: block !important;
+  visibility: visible !important;
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid var(--background-modifier-border) !important;
+  margin: 2em 0 !important;
+  height: 1px !important;
+  text-align: left !important;
+  line-height: 1 !important;
+}
+
+/* Hide hero HR completely (must come after general styling) */
+article.content > hr:first-child,
+article.content > hr:first-of-type,
+article.content .hero hr,
+article.content .hero__content hr,
+article.content header.hero__content hr,
+.hero hr,
+.hero__content hr,
+header.hero__content hr {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-top: none !important;
+  overflow: hidden !important;
+  line-height: 0 !important;
+}
+
+article.content > hr:first-child::before,
+article.content > hr:first-of-type::before,
+article.content .hero hr::before,
+article.content .hero__content hr::before,
+article.content header.hero__content hr::before,
+.hero hr::before,
+.hero__content hr::before,
+header.hero__content hr::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  padding: 0 0 1em 0 !important;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+}
+
+.footer a,
+.footer a:visited {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--text-normal);
+}
+
+/* ============================================
+   POST META
+   ============================================ */
+
+.post__meta,
+.post__author,
+.post__date,
+.feed__meta,
+.feed__author,
+.feed__date,
+.content__meta {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================
+   FEED & LISTINGS
+   ============================================ */
+
+.feed__title a,
+.feed__title a:visited {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.feed__title a:hover {
+  color: var(--text-normal);
+}
+
+.feed__readmore {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   TAGS
+   ============================================ */
+
+.content__tag,
+.feed__tag {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  text-decoration: none;
+}
+
+.content__tag:hover,
+.feed__tag:hover {
+  color: var(--text-muted);
+}
+
+/* ============================================
+   PAGINATION & NAVIGATION
+   ============================================ */
+
+.pagination,
+.content__nav {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+}
+
+.pagination a,
+.content__nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.pagination a:hover,
+.content__nav a:hover {
+  color: var(--text-normal);
+}
+
+/* ============================================
+   AUTHOR BIO
+   ============================================ */
+
+.bio__name {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.bio__desc {
+  color: var(--text-muted);
+  font-size: 0.95em;
+}
