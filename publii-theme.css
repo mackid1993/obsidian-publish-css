@@ -96,7 +96,7 @@ header nav a {
   font-weight: 500 !important;
   font-size: 2.5em !important;
   color: var(--text-muted) !important;
-  margin-top: 1em !important;
+  margin-top: 0 !important;
   margin-bottom: 1em !important;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5) !important;
 }
@@ -105,8 +105,8 @@ header nav a {
 .hero,
 .hero__content,
 header.hero__content {
-  padding: 0 !important;
-  margin: 0 0 1.5em 0 !important;
+  padding: 0.5em 0 0 0 !important;
+  margin: 0 !important;
 }
 
 /* Hide hero separator line */
@@ -618,6 +618,12 @@ main.posts {
 .content__bio,
 .content__footer {
   margin: 0 !important;
+}
+
+/* Add bottom spacing to last elements for even padding */
+article.content > *:last-child,
+main.posts > *:last-child {
+  margin-bottom: 0.5em !important;
 }
 
 /* ============================================
