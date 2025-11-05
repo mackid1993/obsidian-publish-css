@@ -512,7 +512,8 @@ header.hero__content hr::before {
    FEED & LISTINGS
    ============================================ */
 
-main.posts {
+main.posts,
+main.page.page--author {
   background-color: var(--background-secondary) !important;
   border: 1px solid var(--background-modifier-border) !important;
   border-radius: 12px !important;
@@ -525,19 +526,22 @@ main.posts {
 
 /* Responsive feed box width */
 @media (min-width: 37.5em) {
-  main.posts {
+  main.posts,
+  main.page.page--author {
     max-width: 600px !important;
   }
 }
 
 @media (min-width: 56.25em) {
-  main.posts {
+  main.posts,
+  main.page.page--author {
     max-width: 700px !important;
   }
 }
 
 @media (min-width: 70rem) {
-  main.posts {
+  main.posts,
+  main.page.page--author {
     max-width: 800px !important;
   }
 }
