@@ -254,40 +254,32 @@ main img {
    LINKS
    ============================================ */
 
-/* Navigation links */
+/* Default links with border decoration */
 a,
 a:visited,
 a:active {
-  color: var(--text-muted);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--text-normal);
-}
-
-/* Content links */
-.post__entry a,
-.post__entry a:visited,
-.post__entry a:active,
-article a,
-article a:visited,
-article a:active,
-main a,
-main a:visited,
-main a:active {
   color: var(--text-muted);
   text-decoration: none;
   border-bottom: 1px solid var(--text-faint);
   transition: all 0.3s ease;
 }
 
-.post__entry a:hover,
-article a:hover,
-main a:hover {
+a:hover {
   color: var(--text-normal);
   border-bottom-color: var(--text-muted);
 }
+
+/* Navigation links - remove decoration */
+.navbar a,
+.navbar__menu a,
+.menu a,
+nav a,
+header nav a,
+.logo {
+  border-bottom: none;
+}
+
+/* Content links inherit default decoration */
 
 /* ============================================
    CODE
@@ -459,15 +451,7 @@ header.hero__content hr::before {
   font-family: 'Inter', sans-serif;
 }
 
-.footer a,
-.footer a:visited {
-  color: var(--text-muted);
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: var(--text-normal);
-}
+/* Footer links inherit default decoration */
 
 /* ============================================
    POST META
