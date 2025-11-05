@@ -510,6 +510,36 @@ header.hero__content hr::before {
    FEED & LISTINGS
    ============================================ */
 
+main.posts {
+  background-color: var(--background-secondary) !important;
+  border: 1px solid var(--background-modifier-border) !important;
+  border-radius: 12px !important;
+  padding: 0.8em !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4),
+              0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  margin: 0 auto 3em auto !important;
+  max-width: 500px !important;
+}
+
+/* Responsive feed box width */
+@media (min-width: 37.5em) {
+  main.posts {
+    max-width: 600px !important;
+  }
+}
+
+@media (min-width: 56.25em) {
+  main.posts {
+    max-width: 700px !important;
+  }
+}
+
+@media (min-width: 70rem) {
+  main.posts {
+    max-width: 800px !important;
+  }
+}
+
 .feed__title a,
 .feed__title a:visited {
   font-family: 'Open Sans', sans-serif;
@@ -530,6 +560,9 @@ header.hero__content hr::before {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
+  border-bottom: none;
+  display: block;
+  margin-bottom: 1em;
 }
 
 /* ============================================
@@ -576,6 +609,15 @@ header.hero__content hr::before {
 .pagination a:hover,
 .content__nav a:hover {
   color: var(--text-normal);
+}
+
+.content__nav-inner{
+  padding: 0 !important;
+}
+
+.content__bio,
+.content__footer {
+  margin: 0 !important;
 }
 
 /* ============================================
