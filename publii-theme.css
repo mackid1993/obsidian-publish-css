@@ -267,6 +267,7 @@ a:active {
 a:hover {
   color: var(--text-normal);
   border-bottom-color: var(--text-muted);
+  text-shadow: 0 0 8px rgba(184, 184, 184, 0.3);
 }
 
 /* Navigation links - remove decoration */
@@ -502,7 +503,9 @@ header.hero__content hr::before {
    ============================================ */
 
 .content__tag,
-.feed__tag {
+.content__tag:visited,
+.feed__tag,
+.feed__tag:visited {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.75em;
   text-transform: uppercase;
@@ -529,7 +532,9 @@ header.hero__content hr::before {
 }
 
 .pagination a,
-.content__nav a {
+.pagination a:visited,
+.content__nav a,
+.content__nav a:visited {
   color: var(--text-muted);
   text-decoration: none;
 }
