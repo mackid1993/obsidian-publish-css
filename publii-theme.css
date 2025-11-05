@@ -560,15 +560,22 @@ main.page.page--author {
   color: var(--text-normal);
 }
 
-.feed__readmore {
+.feed__readmore,
+.feed__readmore:visited,
+.feed__readmore:hover,
+.feed__readmore:active {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.85em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
-  border-bottom: none;
+  border-bottom: none !important;
   display: block;
   margin-bottom: 1em;
+}
+
+.feed__readmore:hover {
+  color: var(--text-normal);
 }
 
 /* ============================================
