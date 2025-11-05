@@ -283,6 +283,40 @@ header nav a,
 /* Content links inherit default decoration */
 
 /* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn,
+.button,
+button,
+input[type="submit"],
+input[type="button"] {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--background-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 20px;
+  padding: 0.6em 1.5em;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover,
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: var(--background-modifier-border);
+  color: var(--text-normal);
+  border-color: var(--interactive-hover);
+  text-shadow: none;
+}
+
+/* ============================================
    CODE
    ============================================ */
 
