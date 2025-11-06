@@ -23,6 +23,13 @@
   --interactive-hover: #a8a8a8;
 
   --code-background: #252525;
+
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+
+  --shadow-strong: rgba(0, 0, 0, 0.4);
+  --shadow-medium: rgba(0, 0, 0, 0.3);
+  --shadow-text: rgba(0, 0, 0, 0.5);
+  --glow-text: rgba(184, 184, 184, 0.3);
 }
 
 /* ============================================
@@ -98,7 +105,7 @@ header nav a {
   color: var(--text-muted) !important;
   margin-top: 0 !important;
   margin-bottom: 1em !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5) !important;
+  text-shadow: 0 3px 12px var(--shadow-text) !important;
 }
 
 /* Hero section styling */
@@ -121,32 +128,40 @@ div.hero::after {
    CONTENT BOX
    ============================================ */
 
-article.content {
+article.content,
+main.posts,
+main.page.page--author {
   background-color: var(--background-secondary) !important;
   border: 1px solid var(--background-modifier-border) !important;
   border-radius: 12px !important;
   padding: 0.8em !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4),
-              0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 8px 24px var(--shadow-strong),
+              0 2px 8px var(--shadow-medium) !important;
   margin: 0 auto 3em auto !important;
   max-width: 500px !important;
 }
 
 /* Responsive content box width */
 @media (min-width: 37.5em) {
-  article.content {
+  article.content,
+  main.posts,
+  main.page.page--author {
     max-width: 600px !important;
   }
 }
 
 @media (min-width: 56.25em) {
-  article.content {
+  article.content,
+  main.posts,
+  main.page.page--author {
     max-width: 700px !important;
   }
 }
 
 @media (min-width: 70rem) {
-  article.content {
+  article.content,
+  main.posts,
+  main.page.page--author {
     max-width: 800px !important;
   }
 }
@@ -186,28 +201,24 @@ main h6 {
 article h1:not(.hero h1),
 main h1 {
   font-size: 1.1em !important;
-  font-weight: 300 !important;
 }
 
 .post__entry h2,
 article h2,
 main h2 {
   font-size: 1em !important;
-  font-weight: 300 !important;
 }
 
 .post__entry h3,
 article h3,
 main h3 {
   font-size: 0.95em !important;
-  font-weight: 300 !important;
 }
 
 .post__entry h4,
 article h4,
 main h4 {
   font-size: 0.9em !important;
-  font-weight: 300 !important;
 }
 
 .post__entry h5,
@@ -217,7 +228,6 @@ article h6,
 main h5,
 main h6 {
   font-size: 0.85em !important;
-  font-weight: 300 !important;
   color: var(--text-faint) !important;
 }
 
@@ -267,7 +277,7 @@ a:active {
 a:hover {
   color: var(--text-normal);
   border-bottom-color: var(--text-muted);
-  text-shadow: 0 0 8px rgba(184, 184, 184, 0.3);
+  text-shadow: 0 0 8px var(--glow-text);
 }
 
 /* Navigation links - remove decoration */
@@ -328,7 +338,7 @@ main code {
   padding: 0.2em 0.5em;
   border-radius: 3px;
   font-size: 0.9em;
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-family: var(--font-mono) !important;
 }
 
 .post__entry pre,
@@ -339,7 +349,7 @@ main pre {
   border-radius: 5px;
   border: 1px solid var(--background-modifier-border);
   overflow-x: auto;
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-family: var(--font-mono) !important;
 }
 
 .post__entry pre code,
@@ -424,7 +434,6 @@ main td {
 /* Remove Publii's default bullet-point HR styling */
 hr::before,
 .separator::before {
-  content: none !important;
   display: none !important;
 }
 
@@ -455,13 +464,10 @@ article.content header.hero__content hr,
 .hero__content hr,
 header.hero__content hr {
   display: none !important;
-  visibility: hidden !important;
   height: 0 !important;
-  max-height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
   border: none !important;
-  border-top: none !important;
   overflow: hidden !important;
   line-height: 0 !important;
 }
@@ -474,7 +480,6 @@ article.content header.hero__content hr::before,
 .hero hr::before,
 .hero__content hr::before,
 header.hero__content hr::before {
-  content: none !important;
   display: none !important;
 }
 
@@ -511,40 +516,6 @@ header.hero__content hr::before {
 /* ============================================
    FEED & LISTINGS
    ============================================ */
-
-main.posts,
-main.page.page--author {
-  background-color: var(--background-secondary) !important;
-  border: 1px solid var(--background-modifier-border) !important;
-  border-radius: 12px !important;
-  padding: 0.8em !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4),
-              0 2px 8px rgba(0, 0, 0, 0.3) !important;
-  margin: 0 auto 3em auto !important;
-  max-width: 500px !important;
-}
-
-/* Responsive feed box width */
-@media (min-width: 37.5em) {
-  main.posts,
-  main.page.page--author {
-    max-width: 600px !important;
-  }
-}
-
-@media (min-width: 56.25em) {
-  main.posts,
-  main.page.page--author {
-    max-width: 700px !important;
-  }
-}
-
-@media (min-width: 70rem) {
-  main.posts,
-  main.page.page--author {
-    max-width: 800px !important;
-  }
-}
 
 .feed__title a,
 .feed__title a:visited {
