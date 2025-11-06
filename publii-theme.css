@@ -62,12 +62,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 400;
-  color: var(--text-muted);
+  color: var(--text-muted) !important;
   font-size: 0.9em;
+  text-shadow: 0 3px 12px var(--shadow-text);
 }
 
 .logo:hover {
-  color: var(--text-normal);
+  color: var(--text-normal) !important;
 }
 
 /* Responsive logo sizing */
@@ -88,8 +89,48 @@ body {
 .navbar__menu a,
 .menu a,
 nav a,
-header nav a {
+header nav a,
+.navbar .is-separator,
+.navbar__menu .is-separator,
+.menu .is-separator,
+nav .is-separator,
+header nav .is-separator,
+.navbar a:visited,
+.navbar__menu a:visited,
+.menu a:visited,
+nav a:visited,
+header nav a:visited,
+.navbar .is-separator:visited,
+.navbar__menu .is-separator:visited,
+.menu .is-separator:visited,
+nav .is-separator:visited,
+header nav .is-separator:visited,
+.navbar a:active,
+.navbar__menu a:active,
+.menu a:active,
+nav a:active,
+header nav a:active,
+.navbar .is-separator:active,
+.navbar__menu .is-separator:active,
+.menu .is-separator:active,
+nav .is-separator:active,
+header nav .is-separator:active {
   font-family: 'Inter', sans-serif !important;
+  color: var(--text-muted) !important;
+  text-shadow: 0 3px 12px var(--shadow-text);
+}
+
+.navbar a:hover,
+.navbar__menu a:hover,
+.menu a:hover,
+nav a:hover,
+header nav a:hover,
+.navbar .is-separator:hover,
+.navbar__menu .is-separator:hover,
+.menu .is-separator:hover,
+nav .is-separator:hover,
+header nav .is-separator:hover {
+  color: var(--text-normal) !important;
 }
 
 /* ============================================
@@ -286,7 +327,12 @@ a:hover {
 .menu a,
 nav a,
 header nav a,
-.logo {
+.logo,
+.navbar .is-separator,
+.navbar__menu .is-separator,
+.menu .is-separator,
+nav .is-separator,
+header nav .is-separator {
   border-bottom: none;
 }
 
